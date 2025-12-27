@@ -12,7 +12,7 @@ Humangehalt is a **self-assessment**, not a measurement, certification, or quali
 
 This repository contains the source for the public landing page at:
 
-👉 https://humangehalt.org
+👉 https://www.humangehalt.org
 
 The page introduces and defines the concept of *Humangehalt* in a clear, minimal form.
 
