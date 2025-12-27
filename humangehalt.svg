@@ -1,23 +1,24 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 120" role="img"
-    aria-label="Humangehalt logo H slash underlay petrol refined v3">
-    <title>Humangehalt – H/ &copy; Bernhard Dorn</title>
-    <desc>Logo for Humangehalt, featuring an H with a slash underlay in petrol color.
-        [*H/50*](https://www.humangehalt.org)</desc>
+    aria-label="Humangehalt logo H slash underlay petrol">
+    <title>Humangehalt – H/</title>
+    <desc>Logo for Humangehalt: an H with a petrol slash underlay. Author self-assessment notation: H/xx.</desc>
 
     <defs>
-        <!-- Knockout around H strokes: slightly larger to prevent any petrol peeking at the foot -->
-        <mask id="knockoutH" maskUnits="userSpaceOnUse">
-            <rect x="0" y="0" width="210" height="120" fill="white" />
-            <g fill="none" stroke="black" stroke-width="15" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M116 0 V96" />
-            </g>
+        <!-- Knockout only where it matters: right stem (slightly larger for a clean optical gap) -->
+        <mask id="knockoutRightStem" maskUnits="userSpaceOnUse">
+            <rect x="0" y="0" width="320" height="120" fill="white" />
+            <!-- right stem center x=116, H stroke=12 => outer edge ~122 -->
+            <!-- use stroke-width 18 to guarantee gap around the stem -->
+            <path d="M116 24 V96" fill="none" stroke="black" stroke-width="18" stroke-linecap="round"
+                stroke-linejoin="round" />
         </mask>
     </defs>
-    <!-- Slash UNDER: starts exactly on baseline at the stem edge, shorter + steeper -->
-    <path d="M116 96 L180 24" fill="none" stroke="#2E7F7A" stroke-width="12" stroke-linecap="round"
-        stroke-linejoin="round" mask="url(#knockoutH)" clip-path="url(#rightOfStem)" />
 
-    <!-- H ON TOP -->
+    <!-- Slash underlay (shorter + steeper) -->
+    <path d="M116 96 L180 24" fill="none" stroke="#2E7F7A" stroke-width="12" stroke-linecap="round"
+        stroke-linejoin="round" mask="url(#knockoutRightStem)" />
+
+    <!-- H on top -->
     <g fill="none" stroke="#0E1621" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
         <path d="M56 24 V96" />
         <path d="M116 24 V96" />
