@@ -73,4 +73,6 @@ It is used here to identify the concept and its definition.
 
 ---
 
+[*H/20*](https://www.humangehalt.org)
+
 © Humangehalt.org
