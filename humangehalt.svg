@@ -1,24 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 120" role="img"
-    aria-label="Humangehalt logo H slash underlay petrol">
+    aria-label="Humangehalt logo H slash underlay petrol flat-start">
+
     <title>Humangehalt – H/</title>
-    <desc>Logo for Humangehalt: an H with a petrol slash underlay. Author self-assessment notation: H/xx.</desc>
+    <desc>Humangehalt logo: H with an underlaid petrol slash. Slash has a flat start and a rounded end.</desc>
 
     <defs>
-        <!-- Knockout only where it matters: right stem (slightly larger for a clean optical gap) -->
+        <!-- Knockout only the right H stem -->
         <mask id="knockoutRightStem" maskUnits="userSpaceOnUse">
             <rect x="0" y="0" width="320" height="120" fill="white" />
-            <!-- right stem center x=116, H stroke=12 => outer edge ~122 -->
-            <!-- use stroke-width 18 to guarantee gap around the stem -->
-            <path d="M116 24 V96" fill="none" stroke="black" stroke-width="18" stroke-linecap="round"
-                stroke-linejoin="round" />
+            <path d="M116 24 V96" fill="none" stroke="black" stroke-width="18" stroke-linecap="round" />
         </mask>
     </defs>
 
-    <!-- Slash underlay (shorter + steeper) -->
-    <path d="M116 96 L180 24" fill="none" stroke="#2E7F7A" stroke-width="12" stroke-linecap="round"
-        stroke-linejoin="round" mask="url(#knockoutRightStem)" />
+    <!-- SLASH UNDERLAY -->
+    <g mask="url(#knockoutRightStem)" stroke="#2E7F7A" fill="none">
 
-    <!-- H on top -->
+        <!-- Main slash body: FLAT start -->
+        <path d="M116 96 L176 36" stroke-width="12" stroke-linecap="butt" stroke-linejoin="round" />
+
+        <!-- Rounded end cap (short overlay segment) -->
+        <path d="M170 42 L176 36" stroke-width="12" stroke-linecap="round" />
+    </g>
+
+    <!-- H ON TOP -->
     <g fill="none" stroke="#0E1621" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
         <path d="M56 24 V96" />
         <path d="M116 24 V96" />
