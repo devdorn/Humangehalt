@@ -16,18 +16,29 @@
     />
     <meta property="og:type" content="website" />
 
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+
+    <meta property="og:image" content="https://www.humangehalt.org/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Humangehalt – Der Anteil menschlicher Urheberschaft an einem Werk."
+    />
+
     <style>
       :root {
         color-scheme: light dark;
+
         --bg: #0b0c10;
         --fg: #e9eef5;
         --muted: #a7b3c3;
-        --card: rgba(255, 255, 255, 0.06);
         --border: rgba(255, 255, 255, 0.12);
-        --accent: #8ab4f8;
+
         --maxw: 920px;
-        --r: 18px;
         --page-pad: clamp(16px, 4vw, 28px);
+        --brand: var(--fg);
       }
 
       @media (prefers-color-scheme: light) {
@@ -35,16 +46,11 @@
           --bg: #f6f7fb;
           --fg: #0e1621;
           --muted: #425466;
-          --card: rgba(0, 0, 0, 0.03);
           --border: rgba(0, 0, 0, 0.08);
-          --accent: #1b66c9;
         }
       }
 
-      /* DEBUG * {
-        outline: 1px solid rgba(255, 0, 0, 0.2);
-      } */
-
+      /* Reset */
       *,
       *::before,
       *::after {
@@ -53,32 +59,29 @@
 
       html,
       body {
-        height: 100%;
+        min-height: 100%;
       }
+
       html {
         background: var(--bg);
       }
+
       body {
         margin: 0;
-        overflow-x: hidden;
         font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
           Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji';
         color: var(--fg);
         background: var(--bg);
+        overflow-x: hidden;
       }
 
+      /* Page shell */
       .page {
-        min-height: 100dvh;
         width: 100%;
         background: radial-gradient(
-            1200px 700px at 20% 0%,
-            rgba(138, 180, 248, 0.18),
-            transparent 60%
-          ),
-          radial-gradient(
-            900px 600px at 80% 30%,
-            rgba(138, 180, 248, 0.1),
-            transparent 60%
+            800px 400px at 20% 0%,
+            rgba(138, 180, 248, 0.08),
+            transparent 70%
           ),
           var(--bg);
       }
@@ -92,39 +95,27 @@
         padding-bottom: clamp(6px, 1vh, 12px);
       }
 
-      header {
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        gap: 16px;
+      /* Header / Brand */
+      header.brand {
         margin-bottom: 22px;
       }
 
-      .brand h1 {
+      header.brand h1 {
         margin: 0 0 10px 0;
         font-size: clamp(34px, 4.2vw, 56px);
         line-height: 1.02;
         letter-spacing: -0.03em;
+        color: var(--brand);
       }
 
-      .brand p {
+      header.brand p {
         margin: 0;
         color: var(--muted);
         font-size: 16px;
         max-width: 70ch;
       }
 
-      .pill {
-        border: 1px solid var(--border);
-        background: var(--card);
-        padding: 10px 12px;
-        border-radius: 999px;
-        color: var(--muted);
-        font-size: 13px;
-        white-space: nowrap;
-        user-select: none;
-      }
-
+      /* Layout grid */
       .grid {
         display: grid;
         align-items: start;
@@ -137,71 +128,37 @@
         .grid {
           grid-template-columns: 1fr;
         }
-        header {
-          flex-direction: column;
-        }
-        .pill {
-          width: fit-content;
-        }
       }
 
-      .card {
-        border: 1px solid var(--border);
-        background: var(--card);
-        border-radius: var(--r);
-        padding: 18px;
-        backdrop-filter: blur(8px);
-      }
-
-      .card h2 {
-        margin: 0 0 10px 0;
-        font-size: 16px;
-        letter-spacing: 0.01em;
-      }
-
-      .card p {
-        margin: 0 0 10px 0;
-        color: var(--fg);
+      /* MAIN CONTENT TYPO */
+      main h2 {
+        margin: 28px 0 10px 0;
         font-size: 15px;
-        line-height: 1.55;
+        font-weight: 600;
+        letter-spacing: 0.02em;
       }
 
-      .card.long {
-        max-height: 72vh;
-        overflow: auto;
-        padding-right: 14px;
-        scrollbar-gutter: stable;
+      main p {
+        margin: 0 0 14px 0;
+        font-size: 15px;
+        line-height: 1.65;
+        max-width: 72ch;
       }
 
-      /* WebKit (Chrome/Safari/Edge) */
-      .card.long::-webkit-scrollbar {
-        width: 10px;
-      }
-      .card.long::-webkit-scrollbar-thumb {
-        background: rgba(255, 255, 255, 0.16);
-        border-radius: 10px;
-        border: 2px solid rgba(0, 0, 0, 0);
-        background-clip: padding-box;
-      }
-      .card.long::-webkit-scrollbar-track {
-        background: rgba(255, 255, 255, 0.06);
-        border-radius: 10px;
+      /* English section: secondary */
+      main .lang-en {
+        color: var(--muted);
       }
 
-      /* Firefox */
-      .card.long {
-        scrollbar-width: thin;
-        scrollbar-color: rgba(255, 255, 255, 0.18) rgba(255, 255, 255, 0.06);
+      main .lang-en h2 {
+        font-weight: 500;
       }
 
-      @media (max-width: 820px) {
-        .card.long {
-          max-height: none;
-          overflow: visible;
-          padding-right: 18px;
-        }
+      main .lang-en p {
+        color: var(--muted);
       }
 
+      /* Shared helpers */
       .muted {
         color: var(--muted);
       }
@@ -209,51 +166,50 @@
       .mono {
         font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
           'Liberation Mono', 'Courier New', monospace;
-        font-size: 13px;
       }
 
       .divider {
         height: 1px;
         background: var(--border);
-        margin: 14px 0;
         border-radius: 1px;
+        opacity: 0.6;
+        margin: 22px 0;
       }
 
-      .badge-preview {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        border: 1px solid var(--border);
-        background: rgba(0, 0, 0, 0.1);
-        padding: 10px 12px;
-        border-radius: 12px;
+      /* ASIDE (Meta panel) */
+      aside {
+        padding: 18px 0 0 0;
       }
 
-      @media (prefers-color-scheme: light) {
-        .badge-preview {
-          background: rgba(255, 255, 255, 0.7);
-        }
-      }
-
-      .badge-label {
+      aside h2 {
+        margin: 0 0 8px 0;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 0.02em;
         color: var(--muted);
       }
-      .badge-value {
-        font-weight: 700;
-        color: var(--fg);
+
+      aside p {
+        font-size: 14px;
+        line-height: 1.55;
+        max-width: none;
       }
 
-      a {
-        color: var(--accent);
-        text-decoration: none;
-      }
-      a:hover {
-        text-decoration: underline;
+      /* Logo mark */
+      .mark {
+        display: inline-block;
+        margin-bottom: 6px;
       }
 
+      .mark svg {
+        width: 76px;
+        height: auto;
+        display: block;
+      }
+
+      /* Footer */
       footer {
         margin: 12px 0 0 0;
-        padding: 0;
         color: var(--muted);
         font-size: 13px;
         display: flex;
@@ -278,18 +234,16 @@
   <body>
     <div class="page">
       <div class="wrap">
-        <header>
-          <div class="brand">
-            <h1 class="mono">Humangehalt™</h1>
-            <p>
-              Ein knapper Begriff für den Anteil menschlicher Urheberschaft —
-              als Selbstaussage, nicht als Zertifikat.
-            </p>
-          </div>
+        <header class="brand">
+          <h1>Humangehalt™</h1>
+          <p>
+            Ein knapper Begriff für den Anteil menschlicher Urheberschaft — als
+            Selbstaussage, nicht als Zertifikat.
+          </p>
         </header>
 
         <div class="grid">
-          <section class="card long">
+          <main>
             <h2>Definition</h2>
             <p>
               <strong>Humangehalt</strong> ist der prozentuale Anteil
@@ -323,50 +277,121 @@
             </p>
 
             <div class="divider"></div>
+            <p class="muted mono">English version</p>
 
-            <h2>Definition</h2>
-            <p>
-              <strong>Humangehalt</strong> is the percentage share of human
-              authorship in a work (text, image, audio, video, software). It
-              expresses how much thinking, decision-making, writing/creating,
-              and responsibility genuinely came from a person.
-            </p>
-            <p>
-              AI assistance may have been used, but it does not count toward the
-              Humangehalt. The value is the author’s
-              <strong>self-assessment</strong> and not an external audit or
-              certification.
-            </p>
+            <section class="lang-en" lang="en">
+              <h2>Definition</h2>
+              <p>
+                <strong>Humangehalt</strong> is the percentage share of human
+                authorship in a work (text, image, audio, video, software). It
+                expresses how much thinking, decision-making, writing/creating,
+                and responsibility genuinely came from a person.
+              </p>
+              <p>
+                AI assistance may have been used, but it does not count toward
+                the Humangehalt. The value is the author’s
+                <strong>self-assessment</strong> and not an external audit or
+                certification.
+              </p>
 
-            <h2>Usage</h2>
-            <p>
-              <strong>Humangehalt</strong> is assigned by the author of a work
-              as a <strong>self-assessment</strong>. It may be used for texts,
-              software, documentation, images, audio, or video content, for
-              example on websites, in repositories, README files, or
-              publications.
-            </p>
-            <p>
-              The stated value reflects the author’s assessment of the share of
-              human authorship at the time of publication. It is
-              <strong>not an objective measurement</strong>,
-              <strong>not third-party verified</strong>, and
-              <strong>not a quality certification</strong>.
-            </p>
-          </section>
+              <h2>Usage</h2>
+              <p>
+                <strong>Humangehalt</strong> is assigned by the author of a work
+                as a <strong>self-assessment</strong>. It may be used for texts,
+                software, documentation, images, audio, or video content, for
+                example on websites, in repositories, README files, or
+                publications.
+              </p>
+              <p>
+                The stated value reflects the author’s assessment of the share
+                of human authorship at the time of publication. It is
+                <strong>not an objective measurement</strong>,
+                <strong>not third-party verified</strong>, and
+                <strong>not a quality certification</strong>.
+              </p>
+            </section>
+          </main>
 
-          <aside class="card">
+          <aside aria-label="Humangehalt dieser Seite">
             <h2>Humangehalt dieser Seite</h2>
 
-            <div
-              class="badge-preview mono"
-              aria-label="Humangehalt of this website"
-            >
-              <span class="badge-label">Humangehalt™</span>
-              <span class="badge-value">20%</span>
-            </div>
+            <a class="mark" href="/" aria-label="Humangehalt">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="64 18 118 84"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <title>Humangehalt – H/</title>
+                <desc>
+                  Humangehalt logo: H with an underlaid petrol slash. Slash has
+                  a flat start and a rounded end. https://www.humangehalt.org/
+                </desc>
 
-            <p class="muted" style="margin-top: 12px">
+                <defs>
+                  <mask
+                    id="knockoutRightStem"
+                    maskUnits="userSpaceOnUse"
+                    x="0"
+                    y="0"
+                    width="320"
+                    height="120"
+                  >
+                    <rect x="0" y="0" width="320" height="120" fill="white" />
+                    <path
+                      d="M116 24 V96"
+                      fill="none"
+                      stroke="black"
+                      stroke-width="18"
+                      stroke-linecap="round"
+                    />
+                  </mask>
+                </defs>
+
+                <g mask="url(#knockoutRightStem)" stroke="#2E7F7A" fill="none">
+                  <path
+                    d="M116 96 L176 36"
+                    stroke-width="12"
+                    stroke-linecap="butt"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M170 42 L176 36"
+                    stroke-width="12"
+                    stroke-linecap="round"
+                  />
+                </g>
+
+                <text
+                  x="132"
+                  y="100"
+                  fill="#4F6F8F"
+                  font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial"
+                  font-size="18"
+                  font-weight="400"
+                  letter-spacing="0.5"
+                  text-anchor="start"
+                  dominant-baseline="alphabetic"
+                  opacity="80%"
+                >
+                  20
+                </text>
+
+                <g
+                  fill="none"
+                  stroke="#3A4F66"
+                  stroke-width="12"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M70 24 V96" />
+                  <path d="M116 24 V96" />
+                  <path d="M70 60 H116" />
+                </g>
+              </svg>
+            </a>
+
+            <p class="muted">
               Selbsteinschätzung des Urhebers. Inhalt und Struktur dieser
               Website wurden überwiegend mit KI-Unterstützung erstellt, jedoch
               menschlich initiiert, gesteuert, geprüft und verantwortet.
@@ -385,6 +410,7 @@
         </footer>
       </div>
     </div>
+
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
     </script>
