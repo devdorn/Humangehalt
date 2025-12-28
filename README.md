@@ -43,6 +43,13 @@ A numeric value is optional and expresses the author’s **self-assessed share o
 
 The number may change over time as a work evolves.
 
+### Use as a symbol
+
+The **Humangehalt** mark (`H/`) may be used as a symbol on works to indicate the **share of human authorship**. It is not a certification or quality label.
+
+- The mark should be displayed in a **minimal** and **subordinate** manner when a numeric value is used.  
+- It is **not** intended to resemble a badge, score, or seal of quality.
+
 ---
 
 ## What Humangehalt expresses
