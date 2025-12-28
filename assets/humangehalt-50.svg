@@ -1,12 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 120" role="img"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="64 18 118 84" role="img"
     aria-label="Humangehalt logo H slash underlay petrol flat-start">
 
     <title>Humangehalt – H/</title>
-    <desc>Humangehalt logo: H with an underlaid petrol slash. Slash has a flat start and a rounded end.</desc>
+    <desc>Humangehalt logo: H with an underlaid petrol slash. Slash has a flat start and a rounded end.
+        https://www.humangehalt.org/</desc>
 
     <defs>
         <!-- Knockout only the right H stem -->
-        <mask id="knockoutRightStem" maskUnits="userSpaceOnUse">
+        <mask id="knockoutRightStem" maskUnits="userSpaceOnUse" x="0" y="0" width="320" height="120">
             <rect x="0" y="0" width="320" height="120" fill="white" />
             <path d="M116 24 V96" fill="none" stroke="black" stroke-width="18" stroke-linecap="round" />
         </mask>
@@ -14,11 +15,7 @@
 
     <!-- SLASH UNDERLAY -->
     <g mask="url(#knockoutRightStem)" stroke="#2E7F7A" fill="none">
-
-        <!-- Main slash body: FLAT start -->
         <path d="M116 96 L176 36" stroke-width="12" stroke-linecap="butt" stroke-linejoin="round" />
-
-        <!-- Rounded end cap (short overlay segment) -->
         <path d="M170 42 L176 36" stroke-width="12" stroke-linecap="round" />
     </g>
 

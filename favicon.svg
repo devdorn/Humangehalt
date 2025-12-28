@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="64 18 118 84" role="img"
+    aria-label="Humangehalt logo H slash underlay petrol flat-start">
+
+    <title>Humangehalt – H/</title>
+    <desc>Humangehalt logo: H with an underlaid petrol slash. Slash has a flat start and a rounded end.
+        https://www.humangehalt.org/</desc>
+
+    <!-- SLASH UNDERLAY -->
+    <g stroke="#2E7F7A" fill="none">
+        <path d="M116 96 L176 36" stroke-width="12" stroke-linecap="butt" stroke-linejoin="round" />
+        <path d="M170 42 L176 36" stroke-width="12" stroke-linecap="round" />
+    </g>
+    <!-- H ON TOP -->
+    <g fill="none" stroke="#0E1621" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M70 24 V96" />
+        <path d="M116 24 V96" />
+        <path d="M70 60 H116" />
+    </g>
+</svg>
