@@ -19,14 +19,15 @@
     <style>
       :root {
         color-scheme: light dark;
+
         --bg: #0b0c10;
         --fg: #e9eef5;
         --muted: #a7b3c3;
-        --card: rgba(255, 255, 255, 0.06);
         --border: rgba(255, 255, 255, 0.12);
+
         --maxw: 920px;
-        --r: 18px;
         --page-pad: clamp(16px, 4vw, 28px);
+        --brand: var(--fg);
       }
 
       @media (prefers-color-scheme: light) {
@@ -34,14 +35,9 @@
           --bg: #f6f7fb;
           --fg: #0e1621;
           --muted: #425466;
-          --card: rgba(0, 0, 0, 0.03);
           --border: rgba(0, 0, 0, 0.08);
         }
       }
-
-      /* * {
-        outline: 1px solid rgba(255, 0, 0, 0.2);
-      } */
 
       *,
       *::before,
@@ -51,26 +47,23 @@
 
       html,
       body {
-        height: auto;
         min-height: 100%;
       }
+
       html {
         background: var(--bg);
       }
+
       body {
         margin: 0;
         font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
           Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji';
         color: var(--fg);
         background: var(--bg);
-        overflow-y: auto;
         overflow-x: hidden;
       }
 
       .page {
-        /* min-height: 100dvh; */
-        overflow: visible;
-
         width: 100%;
         background: radial-gradient(
             1200px 700px at 20% 0%,
@@ -95,10 +88,6 @@
       }
 
       header {
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        gap: 16px;
         margin-bottom: 22px;
       }
 
@@ -129,103 +118,32 @@
         .grid {
           grid-template-columns: 1fr;
         }
-        header {
-          flex-direction: column;
-        }
-        .pill {
-          width: fit-content;
-        }
       }
 
-      .card {
-        border: 1px solid var(--border);
-        background: var(--card);
-        border-radius: var(--r);
-        padding: 18px;
-        backdrop-filter: blur(8px);
-      }
-
-      .card h2 {
-        margin: 0 0 10px 0;
-        font-size: 16px;
-        letter-spacing: 0.01em;
-      }
-
-      .card p {
-        margin: 0 0 10px 0;
-        color: var(--fg);
-        font-size: 15px;
-        line-height: 1.55;
-        overflow: visible;
-        max-height: none;
-      }
-
-      .card.long {
-        background: transparent;
-        border: none;
-        backdrop-filter: none;
-        padding-left: 0;
-        padding-right: 0;
-      }
-
-      .card.long h2 {
+      /* base typography */
+      h2 {
+        margin: 28px 0 10px 0;
         font-size: 15px;
         font-weight: 600;
         letter-spacing: 0.02em;
-        margin: 28px 0 10px 0;
       }
 
-      .card.long p {
+      p {
+        margin: 0 0 14px 0;
         font-size: 15px;
         line-height: 1.65;
-        margin-bottom: 14px;
-      }
-
-      /* English section subtly secondary */
-      .card.long .lang-en p {
-        color: var(--muted);
-      }
-
-      .card.long h2 + p {
         max-width: 72ch;
       }
 
-      .lang-en {
+      /* English block: secondary */
+      .lang-en,
+      .lang-en p,
+      .lang-en h2 {
         color: var(--muted);
       }
 
       .lang-en h2 {
         font-weight: 500;
-      }
-
-      @media (max-width: 820px) {
-        .card.long {
-          padding-right: 18px;
-        }
-      }
-
-      /* nur rechtes Panel */
-      aside.card {
-        background: transparent;
-        border: none;
-        padding: 18px 0 0 0;
-        backdrop-filter: none;
-      }
-
-      aside.mark {
-        display: inline-block;
-        margin-bottom: 6px;
-      }
-      aside.mark svg {
-        width: 76px;
-      }
-
-      aside.card h2 {
-        font-size: 14px;
-        font-weight: 500;
-        letter-spacing: 0.02em;
-        margin-bottom: 8px;
-        color: var(--muted);
       }
 
       .muted {
@@ -246,40 +164,34 @@
         margin: 22px 0;
       }
 
-      .badge-preview {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        border: 1px solid var(--border);
-        background: rgba(0, 0, 0, 0.1);
-        padding: 10px 12px;
-        border-radius: 12px;
+      /* right panel: unboxed */
+      aside.card {
+        background: transparent;
+        border: none;
+        padding: 18px 0 0 0;
       }
 
-      @media (prefers-color-scheme: light) {
-        .badge-preview {
-          background: rgba(255, 255, 255, 0.7);
-        }
-      }
-
-      .badge-label {
-        color: var(--muted);
-      }
-
-      .badge-value {
-        font-weight: 700;
-        color: var(--fg);
+      .mark {
+        display: inline-block;
+        margin-bottom: 6px;
       }
 
       .mark svg {
-        width: 100px;
+        width: 76px;
         height: auto;
         display: block;
       }
 
+      aside.card h2 {
+        margin: 0 0 8px 0;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+        color: var(--muted);
+      }
+
       footer {
         margin: 12px 0 0 0;
-        padding: 0;
         color: var(--muted);
         font-size: 13px;
         display: flex;
