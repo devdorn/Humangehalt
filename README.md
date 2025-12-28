@@ -1,5 +1,7 @@
 # Humangehalt™
 
+![Humangehalt](humangehalt.svg)
+
 **Humangehalt** is a concise term for the share of **human authorship** in a work.
 
 It expresses how much thinking, decision-making, writing/creating, and responsibility genuinely came from a person — as opposed to being generated or shaped by automated systems such as AI.
