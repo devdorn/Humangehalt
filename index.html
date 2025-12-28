@@ -39,6 +39,7 @@
         }
       }
 
+      /* Reset */
       *,
       *::before,
       *::after {
@@ -63,6 +64,7 @@
         overflow-x: hidden;
       }
 
+      /* Page shell */
       .page {
         width: 100%;
         background: radial-gradient(
@@ -87,11 +89,12 @@
         padding-bottom: clamp(6px, 1vh, 12px);
       }
 
-      header {
+      /* Header / Brand */
+      header.brand {
         margin-bottom: 22px;
       }
 
-      .brand h1 {
+      header.brand h1 {
         margin: 0 0 10px 0;
         font-size: clamp(34px, 4.2vw, 56px);
         line-height: 1.02;
@@ -99,13 +102,14 @@
         color: var(--brand);
       }
 
-      .brand p {
+      header.brand p {
         margin: 0;
         color: var(--muted);
         font-size: 16px;
         max-width: 70ch;
       }
 
+      /* Layout grid */
       .grid {
         display: grid;
         align-items: start;
@@ -120,33 +124,37 @@
         }
       }
 
-      h2 {
+      /* MAIN CONTENT TYPO */
+      main h2 {
         margin: 28px 0 10px 0;
         font-size: 15px;
         font-weight: 600;
         letter-spacing: 0.02em;
       }
 
-      p {
+      main p {
         margin: 0 0 14px 0;
         font-size: 15px;
         line-height: 1.65;
         max-width: 72ch;
       }
 
-      .lang-en,
-      .lang-en p,
-      .lang-en h2 {
+      /* English section: secondary */
+      main .lang-en {
         color: var(--muted);
       }
 
-      .lang-en h2 {
+      main .lang-en h2 {
         font-weight: 500;
       }
 
+      main .lang-en p {
+        color: var(--muted);
+      }
+
+      /* Shared helpers */
       .muted {
         color: var(--muted);
-        font-weight: 400;
       }
 
       .mono {
@@ -162,6 +170,7 @@
         margin: 22px 0;
       }
 
+      /* ASIDE (Meta panel) */
       aside {
         padding: 18px 0 0 0;
       }
@@ -174,6 +183,13 @@
         color: var(--muted);
       }
 
+      aside p {
+        font-size: 14px;
+        line-height: 1.55;
+        max-width: none;
+      }
+
+      /* Logo mark */
       .mark {
         display: inline-block;
         margin-bottom: 6px;
@@ -185,6 +201,7 @@
         display: block;
       }
 
+      /* Footer */
       footer {
         margin: 12px 0 0 0;
         color: var(--muted);
