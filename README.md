@@ -1,6 +1,8 @@
 # Humangehalt™
 
-![Humangehalt](humangehalt.svg)
+<!-- markdownlint-disable MD033 -->
+<img src="humangehalt.svg" alt="Humangehalt" width="240" />
+<!-- markdownlint-enable MD033 -->
 
 **Humangehalt** is a concise term for the share of **human authorship** in a work.
 
