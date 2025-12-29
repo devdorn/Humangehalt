@@ -100,6 +100,6 @@ It is used to identify the concept and its definition.
 
 ---
 
-[*H/20*](https://www.humangehalt.org)
+[*H/80*](https://www.humangehalt.org)
 
 © 2025 Humangehalt.org
