@@ -95,6 +95,51 @@
         padding-bottom: clamp(6px, 1vh, 12px);
       }
 
+      .top-actions {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 10px;
+      }
+
+      .github-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        min-height: 40px;
+        padding: 0 12px;
+        height: 40px;
+        color: var(--fg);
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        text-decoration: none;
+        background: color-mix(in srgb, var(--bg) 90%, var(--fg) 10%);
+        transition: transform 140ms ease, border-color 140ms ease,
+          background 140ms ease;
+      }
+
+      .github-link:hover {
+        transform: translateY(-1px);
+        border-color: color-mix(in srgb, var(--fg) 25%, var(--border));
+        background: color-mix(in srgb, var(--bg) 84%, var(--fg) 16%);
+      }
+
+      .github-link:focus-visible {
+        outline: 2px solid color-mix(in srgb, var(--fg) 40%, transparent);
+        outline-offset: 2px;
+      }
+
+      .github-link svg {
+        width: 21px;
+        height: 21px;
+      }
+
+      .github-link .label {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1;
+      }
+
       /* Header / Brand */
       header.brand {
         margin-bottom: 22px;
@@ -242,6 +287,30 @@
   <body>
     <div class="page">
       <div class="wrap">
+        <div class="top-actions">
+          <a
+            class="github-link"
+            href="https://github.com/devdorn/Humangehalt"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub Repository: Humangehalt"
+            title="GitHub"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path
+                d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.17c-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.71.08-.71 1.16.08 1.78 1.2 1.78 1.2 1.03 1.76 2.7 1.25 3.36.96.11-.75.4-1.25.73-1.54-2.56-.29-5.25-1.28-5.25-5.72 0-1.27.45-2.3 1.19-3.11-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.19A11 11 0 0 1 12 6.32c.98 0 1.97.13 2.89.38 2.2-1.5 3.17-1.19 3.17-1.19.64 1.59.24 2.76.12 3.05.74.81 1.19 1.84 1.19 3.11 0 4.45-2.69 5.43-5.26 5.72.42.36.78 1.07.78 2.16v3.2c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"
+              />
+            </svg>
+            <span class="label">GitHub</span>
+          </a>
+        </div>
+
         <header class="brand">
           <h1>Humangehalt™</h1>
           <p>
