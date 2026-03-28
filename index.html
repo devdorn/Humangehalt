@@ -319,14 +319,34 @@
     </style>
 
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "Humangehalt",
-        "url": "https://humangehalt.md/",
-        "description": "Humangehalt ist der prozentuale Anteil menschlicher Urheberschaft an einem Werk.",
-        "inLanguage": ["de", "en"]
-      }
+      [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Humangehalt",
+          "url": "https://humangehalt.md/",
+          "description": "Humangehalt ist der prozentuale Anteil menschlicher Urheberschaft an einem Werk.",
+          "inLanguage": ["de", "en"],
+          "publisher": {
+            "@type": "Person",
+            "name": "Bernhard Dorn"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Bernhard Dorn",
+          "url": "https://humangehalt.md/",
+          "email": "info@humangehalt.org",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Pappelallee 64",
+            "addressLocality": "Berlin",
+            "postalCode": "10437",
+            "addressCountry": "DE"
+          }
+        }
+      ]
     </script>
   </head>
 
