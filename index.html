@@ -8,24 +8,45 @@
       name="description"
       content="Humangehalt ist der prozentuale Anteil menschlicher Urheberschaft an einem Werk."
     />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
 
     <meta property="og:title" content="Humangehalt" />
     <meta
       property="og:description"
       content="Der prozentuale Anteil menschlicher Urheberschaft an einem Werk."
     />
+    <meta property="og:url" content="https://humangehalt.md/" />
     <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://humangehalt.md/" />
 
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="/favicon.ico" sizes="any" />
 
-    <meta property="og:image" content="https://www.humangehalt.md/og.png" />
+    <meta property="og:image" content="https://humangehalt.md/og.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta
       property="og:image:alt"
       content="Humangehalt – Der Anteil menschlicher Urheberschaft an einem Werk."
     />
+
+    <script>
+      (function () {
+        var host = window.location.hostname.toLowerCase();
+        var redirectHosts = {
+          "humangehalt.org": true,
+        };
+
+        if (redirectHosts[host]) {
+          var target =
+            "https://humangehalt.md" +
+            window.location.pathname +
+            window.location.search +
+            window.location.hash;
+          window.location.replace(target);
+        }
+      })();
+    </script>
 
     <style>
       :root {
@@ -286,6 +307,7 @@
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "Humangehalt",
+        "url": "https://humangehalt.md/",
         "description": "Humangehalt ist der prozentuale Anteil menschlicher Urheberschaft an einem Werk.",
         "inLanguage": ["de", "en"]
       }
