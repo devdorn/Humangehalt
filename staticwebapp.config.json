@@ -1,3 +1,13 @@
 {
-  "trailingSlash": "never"
+  "trailingSlash": "never",
+  "routes": [
+    {
+      "route": "/impressum",
+      "rewrite": "/impressum.html"
+    },
+    {
+      "route": "/datenschutz",
+      "rewrite": "/datenschutz.html"
+    }
+  ]
 }

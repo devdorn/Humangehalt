@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Impressum | Humangehalt</title>
+    <meta
+      name="description"
+      content="Impressum von Humangehalt gemäß den geltenden gesetzlichen Vorgaben."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://humangehalt.md/impressum" />
+
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #0b0c10;
+        --fg: #e9eef5;
+        --muted: #a7b3c3;
+        --border: rgba(255, 255, 255, 0.12);
+        --maxw: 860px;
+      }
+
+      @media (prefers-color-scheme: light) {
+        :root {
+          --bg: #f6f7fb;
+          --fg: #0e1621;
+          --muted: #425466;
+          --border: rgba(0, 0, 0, 0.08);
+        }
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family:
+          ui-sans-serif,
+          system-ui,
+          -apple-system,
+          Segoe UI,
+          Roboto,
+          Arial,
+          "Noto Sans",
+          "Apple Color Emoji",
+          "Segoe UI Emoji";
+        color: var(--fg);
+        background: var(--bg);
+      }
+
+      .wrap {
+        max-width: var(--maxw);
+        margin: 0 auto;
+        padding: clamp(20px, 4vw, 36px);
+      }
+
+      h1 {
+        margin: 0 0 18px 0;
+        font-size: clamp(30px, 4vw, 42px);
+        letter-spacing: -0.02em;
+      }
+
+      h2 {
+        margin: 24px 0 8px 0;
+        font-size: 20px;
+      }
+
+      p,
+      li {
+        line-height: 1.6;
+        color: var(--muted);
+      }
+
+      .card {
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 16px;
+      }
+
+      .nav {
+        margin-top: 26px;
+      }
+
+      .nav a {
+        color: inherit;
+        text-underline-offset: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <h1>Impressum</h1>
+
+      <div class="card">
+        <h2>Anbieter</h2>
+        <p>
+          Name: Bernhard Dorn<br />
+          Anschrift: Bernhard Dorn c/o GAM Pappelallee 64 10437 Berlin<br />
+          Kontakt: info@humangehalt.org
+        </p>
+
+        <h2>Inhaltlich verantwortlich</h2>
+        <p>
+          Bernhard Dorn<br />
+          Bernhard Dorn c/o GAM Pappelallee 64 10437 Berlin
+        </p>
+      </div>
+
+      <p class="nav"><a href="/">Zurück zur Startseite</a></p>
+    </main>
+  </body>
+</html>

@@ -300,6 +300,22 @@
         justify-content: space-between;
         align-items: center;
       }
+
+      .legal-links {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .legal-links a {
+        color: inherit;
+        text-decoration: underline;
+        text-underline-offset: 2px;
+      }
+
+      .legal-links a:hover {
+        color: var(--fg);
+      }
     </style>
 
     <script type="application/ld+json">
@@ -353,7 +369,7 @@
           <main>
             <h2>Definition</h2>
             <p>
-              <strong>Humangehalt</strong> iist der prozentuale Anteil menschlicher Urheberschaft an
+              <strong>Humangehalt</strong> ist der prozentuale Anteil menschlicher Urheberschaft an
               einem Werk. Er macht sichtbar, wie stark ein Werk durch menschliche Beiträge geprägt
               ist.
             </p>
@@ -509,6 +525,11 @@
 
         <footer>
           <div class="mono">© <span id="year"></span> Humangehalt.md</div>
+          <div class="legal-links">
+            <a href="/impressum">Impressum</a>
+            <span aria-hidden="true">|</span>
+            <a href="/datenschutz">Datenschutz</a>
+          </div>
         </footer>
       </div>
     </div>
