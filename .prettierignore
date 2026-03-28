@@ -1,0 +1,10 @@
+node_modules
+bin
+obj
+dist
+.git
+*.csproj
+*.sln
+.DS_Store
+.env
+.env.local
