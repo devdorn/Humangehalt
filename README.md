@@ -102,4 +102,4 @@ It is used to identify the concept and its definition.
 
 [*H/80*](https://humangehalt.md)
 
-© 2026 Humangehalt.org
+© 2026 Humangehalt.md
