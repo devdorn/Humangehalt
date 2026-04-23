@@ -52,7 +52,7 @@ The **Humangehalt** mark (`H/`) may be used as a symbol on works to indicate the
 
 ---
 
-## What Humangehalt expresses
+## What Humangehalt® expresses
 
 Humangehalt refers to the parts of a work that are genuinely attributable to human authorship, such as:
 
@@ -67,7 +67,7 @@ Humangehalt can be applied to texts, software, documentation, images, audio, vid
 
 ---
 
-## What Humangehalt is not
+## What Humangehalt® is not
 
 Humangehalt is **not**:
 
@@ -83,7 +83,7 @@ It makes no claim of correctness beyond the author’s own responsibility.
 
 ## Usage principles
 
-Humangehalt® follows two simple modes:
+Humangehalt follows two simple modes:
 
 - **`H/`** — the concept or idea  
 - **`H/xx`** — a concrete self-statement by the author  
