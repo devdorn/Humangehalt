@@ -1,14 +1,14 @@
-# Humangehalt™
+# Humangehalt®
 
 <!-- markdownlint-disable MD033 -->
 <img src="humangehalt.svg" alt="Humangehalt" width="240" />
 <!-- markdownlint-enable MD033 -->
 
-**Humangehalt** is a concise term for the share of **human authorship** in a work.
+**Humangehalt®** is a concise term for the share of **human authorship** in a work.
 
 It expresses how much thinking, decision-making, writing/creating, and responsibility genuinely came from a person — as opposed to being generated or shaped by automated systems such as AI.
 
-Humangehalt is a **self-assessment**, not a measurement, certification, or quality seal.
+Humangehalt® is a **self-assessment**, not a measurement, certification, or quality seal.
 
 ---
 
@@ -18,7 +18,7 @@ This repository contains the source for the public landing page at:
 
 👉 <https://humangehalt.md>
 
-The page introduces and defines the concept of *Humangehalt* in a clear, minimal form.
+The page introduces and defines the concept of *Humangehalt®* in a clear, minimal form.
 
 There is **no software product**, **no library**, and **no ongoing development** here.
 
@@ -83,7 +83,7 @@ It makes no claim of correctness beyond the author’s own responsibility.
 
 ## Usage principles
 
-Humangehalt follows two simple modes:
+Humangehalt® follows two simple modes:
 
 - **`H/`** — the concept or idea  
 - **`H/xx`** — a concrete self-statement by the author  
@@ -95,7 +95,7 @@ The notation should not be presented as a badge, score, or certification symbol.
 
 ## Trademark notice
 
-**Humangehalt™** is a trademark claim by the author.  
+**Humangehalt®** is a registered trade mark.    
 It is used to identify the concept and its definition.
 
 ---
