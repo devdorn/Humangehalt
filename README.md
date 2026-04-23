@@ -95,7 +95,7 @@ The notation should not be presented as a badge, score, or certification symbol.
 
 ## Trademark notice
 
-**Humangehalt®** is a registered trade mark.    
+**Humangehalt®** is a registered trade mark in the European Union.      
 It is used to identify the concept and its definition.
 
 ---
